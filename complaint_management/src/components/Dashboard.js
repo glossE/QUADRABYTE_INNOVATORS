@@ -3,8 +3,9 @@ import { firestore, auth } from '../firebase';
 import './Dashboard.css';
 import NavigationBar from './NavigationBar';
 import NavLinks from '../dashboard_components/NavLinks';
+import { Link } from 'react-router-dom';
 
-const Dashboard = () => {
+const Dashboard = ({ children }) => {
   const [activeIssues, setActiveIssues] = useState([]);
   const [userId, setUserId] = useState(null);
 
@@ -42,12 +43,20 @@ const Dashboard = () => {
 
   return (
     <body className='dashbody'>
-      <div className='dashboard'>
-        <NavigationBar />
-      </div>
-      <div className='nav-links-container'>
+      {/* <div className='dashboard'>
+      <div className="Navbar">
+      <h2 className='headernav'>User Dashboard</h2>
+      <Link className='navbar-dashboard' aria-current='page' to="/dashboard">Dashboard</Link>
+      <Link className='navbar-comm' to="/dashboard/community-solutions">Community Solutions</Link>
+      <Link className='navbar-comm' to="/dashboard/professional-contacts">Professional Contacts</Link>
+      <Link  className='navbar-comm' to="/dashboard/new-complaint">New Complaint</Link>
+    </div>
+      </div> */}
+
+      <NavigationBar/>
+      {/* <div className='nav-links-container'>
         <NavLinks />
-      </div>
+      </div> */}
       <div className='active-issues-container'>
         <h3>Active Issues</h3>
         <ul className='active-issues-list'>

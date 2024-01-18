@@ -1,20 +1,37 @@
 /* Sample CSS for the community solutions component */
+@media (min-width:1000px){
+.yobody {
+  font-family: 'Arial', sans-serif;
+  background-color: rgb(255, 255, 255);
+  color: #000;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url('../assets/hero-image2.png'); /* Replace with the actual path to your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow-x: scroll;
+  padding-top: 100px;
+}
 
 .dashboard{
   background: #8758ff;
   display: flex;
   justify-content: center;
-
   margin-left: auto;
   /*margin-right: auto;*/
   margin-right: 5rem;
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 .community-solutions {
     max-width: 800px;
-    margin: 0 auto;
+    margin-top: 1000px;
   }
   
   .community-solutions-title {
@@ -24,32 +41,57 @@
   }
   
   .query-container {
-    border: 1px solid #ccc;
-    padding: 15px;
-    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-wrap: wrap;
+    background-color: rgba(255, 255, 255, 0.8); /* Add opacity to the background color */
+    padding: 15px; /* Add some padding to make the content more readable */
+    border-radius: 8px; /* Optional: Add border-radius for a rounded appearance */
   }
   
-  .query-title {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  .query-description,
-  .query-solution {
-    margin-bottom: 10px;
+
+  .query-container::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    opacity: .75;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url('../assets/hero-image2.png');
   }
   
   .query-video {
-    margin-top: 10px;
+    flex: 0 0 300px; /* Set a fixed width for the video */
+    margin-right: 20px; /* Adjust margin as needed */
+    z-index: 1;
   }
   
+  .query-details {
+    flex: 1; /* Take up remaining space */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .query-title,
+  .query-description,
+  .query-solution {
+    margin-bottom: 10px; /* Adjust margin as needed */
+    width: 100%; /* Make sure text takes full width */
+  }
+  
+  
   .query-form {
-    margin-top: 20px;
+    margin-top: 40px;
   }
   
   .form-label {
     display: block;
     margin-bottom: 10px;
+    font-weight: 600;
+    font-size: large;
   }
   
   .form-input,
@@ -82,3 +124,134 @@
     border-radius: 4px;
     cursor: pointer;
   }
+}
+/* Sample CSS for the community solutions component */
+@media (max-width:620px){
+  .yobody {
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(255, 255, 255);
+    color: #000;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('../assets/hero-image2.png'); /* Replace with the actual path to your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-x: scroll;
+    padding-top: 200px;
+  }
+  
+  .dashboard{
+    background: #8758ff;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    /*margin-right: auto;*/
+    margin-right: 5rem;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .community-solutions {
+      max-width: 800px;
+      margin-top: 1000px;
+    }
+    
+    .community-solutions-title {
+      font-size: 24px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    
+    .query-container {
+      display: flex;
+      align-items: center;
+      justify-content:center;
+      flex-wrap: wrap;
+      background-color: rgba(255, 255, 255, 0.8); /* Add opacity to the background color */
+      padding: 15px; /* Add some padding to make the content more readable */
+      border-radius: 8px; /* Optional: Add border-radius for a rounded appearance */
+    }
+    
+  
+    .query-container::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      opacity: .75;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: url('../assets/hero-image2.png');
+    }
+    
+    .query-video {
+      flex: 0 0 300px; /* Set a fixed width for the video */
+      margin-right: 20px; /* Adjust margin as needed */
+      z-index: 1;
+    }
+    
+    .query-details {
+      flex: 1; /* Take up remaining space */
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .query-title,
+    .query-description,
+    .query-solution {
+      margin-bottom: 10px; /* Adjust margin as needed */
+      width: 100%; /* Make sure text takes full width */
+    }
+    
+    
+    .query-form {
+      margin-top: 40px;
+      width: max-content;
+    }
+    
+    .form-label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: 600;
+      font-size: large;
+      background-color: white;
+    }
+    
+    .form-input,
+    .form-textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+    }
+    
+    .form-submit-button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-bottom: 15px;
+    }
+    
+    .form-submit-button:hover {
+      background-color: #45a049;
+    }
+    
+    .register-complaint-button{
+      margin-bottom: 15px;
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  }
+  

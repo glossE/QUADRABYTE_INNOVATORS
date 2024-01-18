@@ -25,10 +25,10 @@ const Login = () => {
         // Redirect to the appropriate dashboard based on the user type
         if (userData.isAgent) {
           // Navigate to the agent dashboard
-          navigate('/agent-dashboard');
+          navigate('/agent-dashboard', { replace: true });
         } else {
           // Navigate to the user dashboard
-          navigate('/dashboard');
+          navigate('/dashboard', { replace: true });
         }
 
         console.log('User logged in successfully!');

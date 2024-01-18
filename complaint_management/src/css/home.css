@@ -1,19 +1,183 @@
 /* Home.css */
+@media  (max-width : 2500px) {
 
 .home-container {
+  text-align: center;
+  position: relative;
+}
+
+.hero-image {
+  
+  width: 100%;
+  height: auto;
+  max-height: 400px; /* Set the desired height for your hero image */
+  object-fit: cover; /* Ensure the image covers the entire container */
+  
+}
+
+.welcome-header {
+  font-size: 2.5em;
+  background: linear-gradient(45deg, #ff8a00, #e52e71);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: color 0.3s ease;
+}
+
+.welcome-header:hover {
+  color: #8e2de2;
+}
+
+.login-button1,
+.register-button1 {
+  margin: 15px;
+  background-color: #000000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-button1:hover,
+.register-button1:hover {
+  background-color: #009f32;
+}
+  
+}
+@media  (max-width : 720px) {
+
+  .home-container {
     text-align: center;
+    position: relative;
+  }
+  
+  .hero-image {
+    
+    width: 100%;
+    height: auto;
+    max-height: 600px; /* Set the desired height for your hero image */
+    object-fit: cover; /* Ensure the image covers the entire container */
+    
   }
   
   .welcome-header {
-    font-size: 2.5em;
+    font-size: 1.5rem;
     background: linear-gradient(45deg, #ff8a00, #e52e71);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    transition: color 0.3s ease; /* Change background-color to color */
+    transition: color 0.3s ease;
   }
   
   .welcome-header:hover {
-    color: #8e2de2; /* Change to the desired hover color for the text */
+    color: #8e2de2;
   }
   
+  .login-button1,
+  .register-button1 {
+    margin: 15px;
+    background-color: #000000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .login-button1:hover,
+  .register-button1:hover {
+    background-color: #009f32;
+  }
+    
+  }
+/* Home.css */
+@media  (min-width : 400px) {
+
+  .home-container {
+    text-align: center;
+    position: relative;
+  }
+  
+  .hero-image {
+    
+    width: 100%;
+    height: auto;
+    max-height: 500px; /* Set the desired height for your hero image */
+    object-fit: cover; /* Ensure the image covers the entire container */
+    
+  }
+  
+  .welcome-header {
+    font-size: 1.5rem;
+    background: linear-gradient(45deg, #ff8a00, #e52e71);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: color 0.3s ease;
+  }
+  
+  .welcome-header:hover {
+    color: #8e2de2;
+  }
+  
+  .login-button1,
+  .register-button1 {
+    margin: 15px;
+    background-color: #000000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.75rem;
+  }
+  
+  .login-button1:hover,
+  .register-button1:hover {
+    background-color: #009f32;
+  }
+    
+  }
+  .features-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-right: -32px;
+    margin-left: -32px;
+  }
+  .features-wrap:first-of-type {
+    margin-top: -16px;
+  }
+  .features-wrap:last-of-type {
+    margin-bottom: -16px;
+  }
+  
+  .feature {
+    padding: 16px 32px;
+    width: 380px;
+    max-width: 380px;
+    flex-grow: 1;
+  }
+  
+  .feature-inner {
+    height: 100%;
+  }
+  
+  .feature-icon {
+    display: flex;
+    justify-content: center;
+  }
+  
+  @media (min-width: 641px) {
+    .features-wrap:first-of-type {
+      margin-top: -24px;
+    }
+    .features-wrap:last-of-type {
+      margin-bottom: -24px;
+    }
+    .feature {
+      padding: 32px 32px;
+    }
+  }

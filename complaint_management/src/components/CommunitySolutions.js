@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { firestore, storage } from '../firebase';
 import '../css/community.css';
+import NavigationBar from './NavigationBar';
 
 const CommunitySolutions = () => {
   const [queries, setQueries] = useState([]);
@@ -104,8 +105,10 @@ const CommunitySolutions = () => {
   return (
     <body className='yobody'>
   
-<h2 className="community-solutions-title">Community Solutions</h2>
+<h2 className="community-solutions-title"></h2>
+<NavigationBar/>
 <div className="community-solutions">
+
 <button onClick={toggleComplaintForm} className="register-complaint-button">
 Post Solution
 </button>
@@ -115,7 +118,7 @@ Post Solution
   <div className="complaint-form">
     <h2>Post Solution</h2>
     <form onSubmit={handleFormSubmit} className="query-form">
-      <label className="form-label">
+      <label className="form-label" >
         Title:
         <input
           type="text"
@@ -124,6 +127,7 @@ Post Solution
           onChange={handleFormChange}
           required
           className="form-input"
+          placeholder='Enter Title Here'
         />
       </label>
       <label className="form-label">
@@ -134,6 +138,7 @@ Post Solution
           onChange={handleFormChange}
           required
           className="form-textarea"
+          placeholder='Enter Description Here'
         />
       </label>
       <label className="form-label">
@@ -144,6 +149,7 @@ Post Solution
           onChange={handleFormChange}
           required
           className="form-textarea"
+          placeholder='Enter Solution Here'
         />
       </label>
       <label className="form-label">

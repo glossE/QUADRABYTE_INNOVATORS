@@ -1,3 +1,5 @@
+@media(max-width: 1500px){
+
 .NavBar{
     margin-top: 4rem;
     width: 500px;
@@ -17,3 +19,52 @@
 .headernav{
 	text-shadow: 2px 4px 4px rgb(46, 91,173,0,6);
 }
+.yobody{
+	padding-top: 150px;
+}
+.new-complaint-container{
+	padding-top: 50px;
+}
+	
+}
+
+@media(max-width: 720px){
+
+	.NavBar{
+		margin-top: 4rem;
+		width: max-content;
+		height: 50px;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+	}
+	.navbar-dashboard{
+		margin-right: 1rem;
+		color: white;
+		font-size: small;
+	}
+	.dashlinks{
+		font-size: small;
+		width: 512px;
+	}
+	.navbar-comm{
+		margin-right: 1rem;
+		color: white;
+		font-size: small;
+
+	}
+	.headernav{
+		text-shadow: 2px 4px 4px rgb(46, 91,173,0,6);
+		font-size: small;
+	}
+	.yobody{
+		padding-top: 50px;
+		width: 500px;
+		justify-content: center;
+	}
+	.new-complaint-container{
+		padding-top: 50px;
+	}
+		
+	}
+	

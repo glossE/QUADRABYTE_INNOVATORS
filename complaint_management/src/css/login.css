@@ -1,18 +1,24 @@
+@media (max-width: 2500px) {
+  
 .mybody {
   font-family: 'Arial', sans-serif;
-  background-color: #ffffff;
+  background-color: rgb(255, 255, 255);
   color: #fff;
   margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background-image: url('../assets/hero-image2.png'); /* Replace with the actual path to your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  
 }
 
 .login-container {
-  background-color: #f8f8f8;
+  background-color: rgba(248, 248, 248, 0.8); /* Adjust the background color and opacity */
   color: #fff;
-  border: 1px solid #ddd;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -65,3 +71,81 @@
 .register-link:hover {
   text-decoration: underline;
 }
+}
+@media (max-width: 720px) {
+  .mybody {
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(255, 255, 255);
+    color: #fff;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('../assets/hero-image2.png'); /* Replace with the actual path to your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    
+  }
+  
+  .login-container {
+    background-color: rgba(248, 248, 248, 0.8); /* Adjust the background color and opacity */
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .login-title {
+    color: rgb(0, 0, 0);
+    font-size: small;
+  }
+  
+  .login-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 1px solid #003b69;
+    border-radius: 4px;
+    color: #000; /* Adjust text color for better visibility */
+    font-size: x-small;
+  }
+  
+  .login-button {
+    background-color: #000000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: small;
+  }
+  
+  .login-button:hover {
+    background-color: #009f32;
+  }
+  
+  .peek-button{
+    position: absolute;
+      right: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      color: #0074cc;
+  }
+  
+  .register-link {
+    color: #000000;
+    text-decoration: none;
+    font-size: small;
+  }
+  
+  .register-link:hover {
+    text-decoration: underline;
+  }
+  }

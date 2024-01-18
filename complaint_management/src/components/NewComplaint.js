@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { auth, firestore } from '../firebase';
 import '../css/complaint.css';
+import NavigationBar from './NavigationBar';
 
 const NewComplaint = () => {
   const [complaintData, setComplaintData] = useState({
@@ -61,45 +62,48 @@ const NewComplaint = () => {
     }
   };
   return (
-    <div className="new-complaint-container">
-      <h2 className="complaint-title">New Complaint</h2>
-      <form onSubmit={handleFormSubmit} className="complaint-form">
-        {/* Add form fields for complaint details */}
-        <label className="complaint-label">
-          Title:
-          <input
-            type="text"
-            name="title"
-            value={complaintData.title}
-            onChange={(e) => setComplaintData({ ...complaintData, title: e.target.value })}
-            required
-            className="complaint-input"
-          />
-        </label>
-        {/* Add other form fields */}
-        <label className="complaint-label">
-          Description:
-          <textarea
-            name="description"
-            value={complaintData.description}
-            onChange={(e) => setComplaintData({ ...complaintData, description: e.target.value })}
-            required
-            className="complaint-textarea"
-          />
-        </label>
-        <label className="complaint-label">
-          Service Provider / Product:
-          <input
-            type="text"
-            name="serviceProviderProduct"
-            value={complaintData.serviceProviderProduct}
-            onChange={(e) => setComplaintData({ ...complaintData, serviceProviderProduct: e.target.value })}
-            required
-            className="complaint-input"
-          />
-        </label>
-        <button type="submit" className="complaint-submit-button">Submit Complaint</button>
-      </form>
+    <div className='comp-body'>
+      <div className="new-complaint-container">
+        <h2 className="complaint-title">New Complaint</h2>
+        <NavigationBar/>
+        <form onSubmit={handleFormSubmit} className="complaint-form">
+          {/* Add form fields for complaint details */}
+          <label className="complaint-label">
+            Title:
+            <input
+              type="text"
+              name="title"
+              value={complaintData.title}
+              onChange={(e) => setComplaintData({ ...complaintData, title: e.target.value })}
+              required
+              className="complaint-input"
+            />
+          </label>
+          {/* Add other form fields */}
+          <label className="complaint-label">
+            Description:
+            <textarea
+              name="description"
+              value={complaintData.description}
+              onChange={(e) => setComplaintData({ ...complaintData, description: e.target.value })}
+              required
+              className="complaint-textarea"
+            />
+          </label>
+          <label className="complaint-label">
+            Service Provider / Product:
+            <input
+              type="text"
+              name="serviceProviderProduct"
+              value={complaintData.serviceProviderProduct}
+              onChange={(e) => setComplaintData({ ...complaintData, serviceProviderProduct: e.target.value })}
+              required
+              className="complaint-input"
+            />
+          </label>
+          <button type="submit" className="complaint-submit-button">Submit Complaint</button>
+        </form>
+      </div>
     </div>
   );
 };

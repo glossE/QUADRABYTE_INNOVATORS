@@ -8,7 +8,8 @@ import Dashboard from './components/Dashboard';
 import AgentDashboard from './components/AgentDashboard';
 import CommunitySolutions from './components/CommunitySolutions';
 import NewComplaint from './components/NewComplaint';
-import ProfessionalContacts from './components/ProfessionalContacts'
+import ProfessionalContacts from './components/ProfessionalContacts';
+import ResolveIssue from './components/ResolveIssue';
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/professional-contacts" element={<ProfessionalContacts />} />
         <Route path="/community-solutions" element={<CommunitySolutions />} />
         <Route path="/new-complaint" element={<NewComplaint/>}/>
+        <Route path="/resolve-issue/:issueId" element={<ResolveIssue/>}/>
         <Route path="/" element={<Home />} />
       </Routes>
     </Router>
