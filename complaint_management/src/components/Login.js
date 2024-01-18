@@ -1,7 +1,7 @@
-// src/components/Login.js
+// Login.js
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { auth } from '../firebase';
+import { auth, firestore } from '../firebase';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -10,11 +10,29 @@ const Login = () => {
 
   const handleLogin = async () => {
     try {
-      await auth.signInWithEmailAndPassword(email, password);
-      console.log('User logged in successfully!');
-      
-      // Redirect to the dashboard after successful login
-      navigate('/dashboard');
+      // Sign in the user with Firebase Authentication
+      const userCredential = await auth.signInWithEmailAndPassword(email, password);
+      const user = userCredential.user;
+
+      // Retrieve user data from Firestore
+      const userDoc = await firestore.collection('users').doc(user.uid).get();
+
+      if (userDoc.exists) {
+        const userData = userDoc.data();
+
+        // Redirect to the appropriate dashboard based on the user type
+        if (userData.isAgent) {
+          // Navigate to the agent dashboard
+          navigate('/agent-dashboard');
+        } else {
+          // Navigate to the user dashboard
+          navigate('/dashboard');
+        }
+
+        console.log('User logged in successfully!');
+      } else {
+        console.error('User data not found in Firestore');
+      }
     } catch (error) {
       console.error('Login failed', error.message);
     }

@@ -1,0 +1,51 @@
+
+.SearchBox_SearchBox {
+	position: relative;
+	left: 0px;
+	top: 0px;
+	margin: auto;
+	width: 100%;
+	height: 100vh;
+	overflow: auto;
+	display: flex;
+	padding-top: 65.16px;
+	padding-right: 304.08px;
+	padding-bottom: 65.16px;
+	padding-left: 217.2px;
+	box-sizing: border-box;
+	align-items: center;
+	background: rgba(246,246,246,1.00);
+}
+.SearchBox_SearchBox ._ {
+	position: relative;
+	flex: none;
+	margin-right: 65.16px;
+	width: 40.6px;
+	height: 28.6px;
+}
+.SearchBox_SearchBox ._ .__1 {
+	position: absolute;
+	left: 9.050027618408203px;
+	top: 9.049944763183593px;
+	width: 79.16666507720947%;
+	height: 79.16666507720947%;
+}
+.SearchBox_SearchBox ._ .__1 .Vector {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+}
+.SearchBox_SearchBox .Searchforqueries {
+	position: relative;
+	flex: none;
+	margin-right: 65.16px;
+	width: 662.4599999999999px;
+	height: 92.31px;
+	color: rgba(0,0,0,1.00);
+	font-family: Inter;
+	font-size: 76.02px;
+	font-weight: 400;
+	line-height: 92.00147821426391px;
+}
