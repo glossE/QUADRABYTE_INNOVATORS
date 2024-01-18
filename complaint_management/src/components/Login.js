@@ -2,10 +2,12 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { auth, firestore } from '../firebase';
+import '../css/login.css';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
   const handleLogin = async () => {
@@ -39,23 +41,38 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <h2>Login</h2>
+    <body className='mybody'>
+    <div class="login-container">
+    <h2 class="login-title">Login</h2>
+    <input
+      class="login-input"
+      type="email"
+      placeholder="Email"
+      onChange={(e) => setEmail(e.target.value)}
+    />
+    <div style={{ position: 'relative' }}>
       <input
-        type="email"
-        placeholder="Email"
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <input
-        type="password"
+        class="login-input"
+        type={showPassword ? 'text' : 'password'}
         placeholder="Password"
         onChange={(e) => setPassword(e.target.value)}
       />
-      <button onClick={handleLogin}>Login</button>
-
-      {/* Add a link to navigate to the registration page */}
-      <Link to="/register">Don't have an account? Register here.</Link>
+      <button
+        class="peek-button"
+        onClick={() => setShowPassword(!showPassword)}
+        aria-label={showPassword ? 'Hide Password' : 'Show Password'}
+      >
+        👁️
+      </button>
     </div>
+    <div>
+      <button class="login-button" onClick={handleLogin}>Login</button>
+    </div>
+  
+    {/* Add a link to navigate to the registration page */}
+    <Link class="register-link" to="/register">Don't have an account? Register here.</Link>
+  </div>
+  </body>
   );
 };
 

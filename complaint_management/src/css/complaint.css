@@ -1,0 +1,52 @@
+/* Styles for the New Complaint form */
+
+.new-complaint-container {
+
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .complaint-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .complaint-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .complaint-label {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .complaint-input,
+  .complaint-textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .complaint-submit-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .complaint-submit-button:hover {
+    background-color: #45a049;
+  }
+  

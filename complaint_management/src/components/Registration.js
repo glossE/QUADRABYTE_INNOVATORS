@@ -2,10 +2,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { auth, firestore } from '../firebase';
+import '../css/register.css';
 
 const Registration = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
   const [isAgent, setIsAgent] = useState(false);
 
   const handleRegister = async () => {
@@ -28,34 +30,47 @@ const Registration = () => {
   };
 
   return (
-    <div>
-      <h2>Register</h2>
+    <body className='nybody'>
+    <div class="register-container">
+      <h2 class="register-title">Register</h2>
       <input
+        class="register-input"
         type="email"
         placeholder="Email"
         onChange={(e) => setEmail(e.target.value)}
       />
-      <input
-        type="password"
-        placeholder="Password"
-        onChange={(e) => setPassword(e.target.value)}
-      />
-
-      {/* Add a checkbox for selecting the agent entity */}
-      <label>
+      <div style={{ position: 'relative' }}>
+        <input
+          class="register-input"
+          type={showPassword ? 'text' : 'password'}
+          placeholder="Password"
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <button
+          class="peek-button"
+          onClick={() => setShowPassword(!showPassword)}
+          aria-label={showPassword ? 'Hide Password' : 'Show Password'}
+        >
+          👁️
+        </button>
+      </div>
+      <label class="register-checkbox-label">
         Register as Agent:
         <input
+          class="register-checkbox"
           type="checkbox"
           checked={isAgent}
           onChange={(e) => setIsAgent(e.target.checked)}
         />
       </label>
-
-      <button onClick={handleRegister}>Register</button>
-
+      <div>
+      <button class="register-button" onClick={handleRegister}>Register</button>
+      </div>
       {/* Add a link to navigate to the login page */}
-      <Link to="/login">Already have an account? Login here.</Link>
+      <Link class="login-link" to="/login">Already have an account? Login here.</Link>
     </div>
+  </body>
+  
   );
 };
 

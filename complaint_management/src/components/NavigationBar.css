@@ -1,0 +1,19 @@
+.NavBar{
+    margin-top: 4rem;
+    width: 500px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+.navbar-dashboard{
+	margin-right: 3rem;
+	color: white;
+}
+.navbar-comm{
+	margin-right: 3rem;
+	color: white;
+}
+.headernav{
+	text-shadow: 2px 4px 4px rgb(46, 91,173,0,6);
+}

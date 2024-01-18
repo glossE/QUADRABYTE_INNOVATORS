@@ -1,0 +1,19 @@
+/* Home.css */
+
+.home-container {
+    text-align: center;
+  }
+  
+  .welcome-header {
+    font-size: 2.5em;
+    background: linear-gradient(45deg, #ff8a00, #e52e71);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: color 0.3s ease; /* Change background-color to color */
+  }
+  
+  .welcome-header:hover {
+    color: #8e2de2; /* Change to the desired hover color for the text */
+  }
+  
