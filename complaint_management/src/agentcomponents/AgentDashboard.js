@@ -30,12 +30,6 @@ const AgentDashboard = () => {
     fetchActiveIssues();
   }, []); // Run this effect only once when the component mounts
 
-  const handleResolveClick = (issueId) => {
-    // Your logic for resolving the issue and navigating to the resolution page
-    
-    console.log(`Resolve Issue clicked for issue with id: ${issueId}`);
-  };
-
   return (
     <body>
       <div>
@@ -45,13 +39,12 @@ const AgentDashboard = () => {
         <h3>All Active Issues</h3>
         <ul className='active-issues-list'>
           {activeIssues.map((issue) => (
-            <li key={issue.id} className='active-issue-item'>
-              {/* Display issue name and id */}
+            <li key={issue.id} className='active-issue-item' oncl>
               {`ID: ${issue.id} - ${issue.title}`}
-              {/* Add a button to navigate to the resolution page */}
               <div>
+              {/* Pass the issue.id to the ResolveIssue component */}
               <Link to={`/resolve-issue/${issue.id}`}>
-                <button className='resolvebutton' onClick={() => handleResolveClick(issue.id)}>Resolve Issue</button>
+                <button>Resolve Issue</button>
               </Link>
               </div>
             </li>

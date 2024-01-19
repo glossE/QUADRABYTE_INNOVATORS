@@ -2,10 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { firestore, auth } from '../firebase';
 import './Dashboard.css';
 import NavigationBar from './NavigationBar';
-import NavLinks from '../dashboard_components/NavLinks';
 import { Link } from 'react-router-dom';
 
-const Dashboard = ({ children }) => {
+const Dashboard = () => {
   const [activeIssues, setActiveIssues] = useState([]);
   const [userId, setUserId] = useState(null);
 
@@ -43,29 +42,21 @@ const Dashboard = ({ children }) => {
 
   return (
     <body className='dashbody'>
-      {/* <div className='dashboard'>
-      <div className="Navbar">
-      <h2 className='headernav'>User Dashboard</h2>
-      <Link className='navbar-dashboard' aria-current='page' to="/dashboard">Dashboard</Link>
-      <Link className='navbar-comm' to="/dashboard/community-solutions">Community Solutions</Link>
-      <Link className='navbar-comm' to="/dashboard/professional-contacts">Professional Contacts</Link>
-      <Link  className='navbar-comm' to="/dashboard/new-complaint">New Complaint</Link>
-    </div>
-      </div> */}
-
-      <NavigationBar/>
-      {/* <div className='nav-links-container'>
-        <NavLinks />
-      </div> */}
+      <NavigationBar />
       <div className='active-issues-container'>
         <h3>Active Issues</h3>
         <ul className='active-issues-list'>
-          {activeIssues.map((issue) => (
-            <li key={issue.id} className='active-issue-item'>
-              {issue.title}
-            </li>
-          ))}
-        </ul>
+  {activeIssues.map((issue) => (
+    <li key={issue.id} className='active-issue-item'>
+      {issue.title}
+      {/* Add a button to navigate to the issue status page */}
+      <Link to={`/issue-status/${issue.id}`}> {/* Include issue.id in the URL */}
+        <button>Check Status</button>
+      </Link>
+    </li>
+  ))}
+</ul>
+
       </div>
     </body>
   );

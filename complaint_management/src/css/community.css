@@ -14,7 +14,7 @@
   background-position: center;
   background-repeat: no-repeat;
   overflow-x: scroll;
-  padding-top: 100px;
+  padding-top: 1200px;
 }
 
 .dashboard{
@@ -31,7 +31,7 @@
 
 .community-solutions {
     max-width: 800px;
-    margin-top: 1000px;
+    /* margin-top: 1000px; */
   }
   
   .community-solutions-title {
@@ -45,7 +45,8 @@
     align-items: center;
     justify-content:center;
     flex-wrap: wrap;
-    background-color: rgba(255, 255, 255, 0.8); /* Add opacity to the background color */
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.95); /* Add opacity to the background color */
     padding: 15px; /* Add some padding to make the content more readable */
     border-radius: 8px; /* Optional: Add border-radius for a rounded appearance */
   }
@@ -92,6 +93,7 @@
     margin-bottom: 10px;
     font-weight: 600;
     font-size: large;
+    border-radius: 80%;
   }
   
   .form-input,
@@ -99,6 +101,7 @@
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
+
   }
   
   .form-submit-button {

@@ -101,13 +101,16 @@ button:hover{
   
   .active-issues-container {
     max-height: 100vh; /* Set maximum height to viewport height */
+    background-image: url('../assets/hero-image2.png'); /* Replace with the actual path to your image */
+    background-size: cover;
+    margin-top: 20px;
   }
   
   .active-issues-list {
     list-style: none;
     padding: 0;
     margin: 0;
-    /* overflow-y: auto; */
+    
   }
   
   .active-issue-item {

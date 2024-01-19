@@ -31,12 +31,12 @@ const Login = () => {
           navigate('/dashboard', { replace: true });
         }
 
-        console.log('User logged in successfully!');
+        alert('User logged in successfully!');
       } else {
-        console.error('User data not found in Firestore');
+        alert('User data not found in Firestore');
       }
     } catch (error) {
-      console.error('Login failed', error.message);
+      alert('Login failed', error.message);
     }
   };
 

@@ -25,6 +25,13 @@
 .new-complaint-container{
 	padding-top: 50px;
 }
+
+.dashlinks{
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: center;
+}
 	
 }
 

@@ -23,9 +23,10 @@ const Registration = () => {
         // Add other user details as needed
       });
 
-      console.log('User registered successfully!');
+      alert('User registered successfully!');
+       alert('You are registered');
     } catch (error) {
-      console.error('Registration failed', error.message);
+      alert('Registration failed, user already exists', error.message);
     }
   };
 

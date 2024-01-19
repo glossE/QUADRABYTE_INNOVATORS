@@ -20,7 +20,7 @@ const NavigationBar = () => {
       <Link className="navbar-comm" to="/community-solutions">Community Solutions</Link>
       <Link className='navbar-comm' to="/professional-contacts">Professional Contacts</Link>
       <Link  className='navbar-comm' to="/new-complaint">New Complaint</Link>
-      <Link> <LogoutButton onLogout={handleLogout} /> </Link>
+     
     </div>
     </div>
   );
